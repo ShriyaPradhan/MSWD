@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Selection - Global Airlines</title>
+    <style>
+        body {
+            background-image: url('bg1.jpg');
+            font-family: Arial, sans-serif;
+            background-color: #81aada;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto 0;
+            padding: 20px;
+            background-color: #dfedf1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select,
+        input[type="radio"],
+        input[type="date"] {
+            width: 100%;
+            padding: 15px; /* Increase padding for larger text fields */
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .form-section label {
+            font-weight: normal;
+        }
+
+        /* Custom CSS for the source and destination text fields */
+        .form-section .location-inputs {
+            display: flex;
+            justify-content:space-around;
+        }
+
+        .form-section .location-inputs input {
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Flight Selection</h1>
+        <form>
+            <div class="form-section">
+                <div class="location-inputs">
+                    <div>
+                        <label for="source">Source Location:</label>
+                        <select From="optionsDropdown">
+                            <option value="Option 1">Enter the Source</option>
+                            <option value="Option 1">Vijayawada</option>
+                            <option value="Option 2">Delhi</option>
+                            <option value="Option 3">Hyderbad</option>
+                            <option value="Option 4">Visakhapatnam</option>
+                            <option value="Option 5">Chennai</option>
+                            <option value="Option 6">Bengaluru</option>
+                            <option value="Option 7">Abu Dhabi</option>
+                            <option value="Option 8">San fransisco</option>
+                            <option value="Option 9">Mumbai</option>
+                            <option value="Option 10">Surat</option>
+                            <option value="Option 11">Tirupati</option>
+                            <option value="Option 12">Goa</option>
+                            <option value="Option 13">Kolkata</option>
+                            <option value="Option 14">Sharjah</option>
+                            <option value="Option 15">Kochi</option>
+                            <option value="Option 16">Doha</option>
+                            <option value="Option 17">Muscat</option>
+                            <option value="Option 18">Bhopal</option>
+                            <option value="Option 19">Indore</option>
+                            <option value="Option 20">Shirdi</option>
+                            <option value="Option 21">Varanasi</option>
+                            <option value="Option 22">Dhaka</option>
+                            <option value="Option 23">New York</option>
+                            <option value="Option 24">Katmandu</option>
+                            <option value="Option 25">Columbo</option>
+                            <option value="Option 26">Madurai</option>
+                          </select>
+                    </div>
+                    <div>
+                        <label for="destination">Destination Location:</label>
+                        <select From="optionsDropdown">
+                            <option value="Option 1">Enter the Source</option>
+                            <option value="Option 1">Vijayawada</option>
+                            <option value="Option 2">Delhi</option>
+                            <option value="Option 3">Hyderbad</option>
+                            <option value="Option 4">Visakhapatnam</option>
+                            <option value="Option 5">Chennai</option>
+                            <option value="Option 6">Bengaluru</option>
+                            <option value="Option 7">Abu Dhabi</option>
+                            <option value="Option 8">San fransisco</option>
+                            <option value="Option 9">Mumbai</option>
+                            <option value="Option 10">Surat</option>
+                            <option value="Option 11">Tirupati</option>
+                            <option value="Option 12">Goa</option>
+                            <option value="Option 13">Kolkata</option>
+                            <option value="Option 14">Sharjah</option>
+                            <option value="Option 15">Kochi</option>
+                            <option value="Option 16">Doha</option>
+                            <option value="Option 17">Muscat</option>
+                            <option value="Option 18">Bhopal</option>
+                            <option value="Option 19">Indore</option>
+                            <option value="Option 20">Shirdi</option>
+                            <option value="Option 21">Varanasi</option>
+                            <option value="Option 22">Dhaka</option>
+                            <option value="Option 23">New York</option>
+                            <option value="Option 24">Katmandu</option>
+                            <option value="Option 25">Columbo</option>
+                            <option value="Option 26">Madurai</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label>Choose Your Trip:</label>
+                <input type="radio" id="oneWay" name="tripType" value="oneWay" checked>
+                <label for="oneWay">One Way</label>
+                <input type="radio" id="roundTrip" name="tripType" value="roundTrip">
+                <label for="roundTrip">Round Trip</label>
+            </div>
+
+            <div class="form-section">
+                <label for="departureDate">Departure Date:</label>
+                <input type="date" id="departureDate" name="departureDate" required>
+            </div>
+
+            <div class "form-section" id="returnDateSection">
+                <label for="returnDate">Return Date (for Round Trip):</label>
+                <input type="date" id="returnDate" name="returnDate" disabled>
+            </div>
+
+            <div class="form-section">
+                <label for="passengers">Number of Passengers:</label>
+                <select id="passengers" name="passengers">
+                    <option value="1">Select no. of passengers</option>
+                    <option value="2">1 Passenger</option>
+                    <option value="3">2 Passengers</option>
+                    <option value="4">3 Passengers</option>
+                    <option value="5">4 Passengers</option>
+                    <option value="6">5 Passengers</option>
+                    <option value="7">6 Passengers</option>
+                    <option value="8">7 Passengers</option>
+                    <option value="9">8 Passengers</option>
+                    <option value="10">9 Passengers</option>
+                </select>
+            </div>
+
+            
+
+            <!-- <button type="submit">Book Ticket</button> -->
+    
+
+        <!-- <div>
+            <button type="button" id="bookButton" onclick="showSuccessMessage()">Book Ticket</button>
+        </div> -->
+
+        <div>
+            <button type="button" id="seatselection" onclick="showSuccessMessage()">Seat Selection</button>
+        </div>
+        
+
+        <!-- <div>
+            <button type="button" id="Seat" onclick="showSuccessMessage()">Select Seat</button>
+        </div> -->
+
+        
+        </form>
+    </div>
+
+   
+    <script>
+        const oneWayRadio = document.getElementById("oneWay");
+        const roundTripRadio = document.getElementById("roundTrip");
+        const returnDateSection = document.getElementById("returnDateSection");
+        const returnDateInput = document.getElementById("returnDate");
+
+        oneWayRadio.addEventListener("change", function () {
+            returnDateInput.disabled = true;
+        });
+
+        roundTripRadio.addEventListener("change", function () {
+            returnDateInput.disabled = false;
+        });
+
+        // <button id="seatselection" href="#">Seat Selection</button>
+
+         const seatselection = document.getElementById("seatselection");
+         seatselection.addEventListener("click", function () {
+         //Redirect to a page where users can select and book flights.
+            window.location.href = "seat.html";
+         });
+
+        //  // JavaScript for handling the "Book Ticket" button
+        //  function showSuccessMessage() {
+        //     // Create a pop-up window with the success message
+        //     alert("You have successfully booked your ticket.");
+        // }
+
+        signupButton.addEventListener("click", function () {
+            window.location.href = "signup.html";
+        });
+
+        </script>
+</body>
+</html>

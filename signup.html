@@ -1,0 +1,263 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Airline Reservation System - Signup</title>
+    <style>
+        body {
+            background-image: url('bg1.jpg');
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 800px;
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: justify;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .signup-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .signup-form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="about_us.html">About Us</a>
+        <a href="contacts.html">Contacts</a>
+        <a id="loginButton" href="login.html">Login</a>
+    </div>
+
+    <div class="container">
+        <h1>Signup for Airline Reservation</h1>
+        <form class="signup-form" id="signupForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        const loginButton = document.getElementById("loginButton");
+
+        loginButton.addEventListener("click", function () {
+            window.location.href = "login.html";
+        });
+
+        const signupForm = document.getElementById("signupForm");
+
+        signupForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            const formData = new FormData(signupForm);
+            const formDataObject = {};
+            
+            formData.forEach((value, key) => {
+                formDataObject[key] = value;
+            });
+
+            // Send the form data to the server for processing.
+            // You need server-side scripting (e.g., PHP, Node.js) to handle user registration.
+
+            // For this example, we'll simply display the submitted data.
+            alert("Signup successful. You submitted the following data:\n" + JSON.stringify(formDataObject, null, 2));
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airline Reservation System - Signup</title>
+    <style>
+        body {
+            background-image: url('bg1.jpg');
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .signup-form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="about_us.html">About Us</a>
+        <a href="contacts.html">Contacts</a>
+        <a id="loginButton" href="login.html">Login</a>
+    </div>
+
+    <div class="container">
+        <h1>Signup for Airline Reservation</h1>
+        <form class="signup-form" id="signupForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        const loginButton = document.getElementById("loginButton");
+
+        loginButton.addEventListener("click", function () {
+            window.location.href = "login.html";
+        });
+
+        const signupForm = document.getElementById("signupForm");
+
+        signupForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            const formData = new FormData(signupForm);
+            const formDataObject = {};
+            
+            formData.forEach((value, key) => {
+                formDataObject[key] = value;
+            });
+
+            // Send the form data to the server for processing.
+            // You need server-side scripting (e.g., PHP, Node.js) to handle user registration.
+
+            // For this example, we'll simply display the submitted data.
+            alert("Signup successful. You submitted the following data:\n" + JSON.stringify(formDataObject, null, 2));
+        });
+    </script>
+</body>
+</html>
